@@ -114,7 +114,7 @@ BEGIN
 END;
 $function$
 ;
-
+DROP VIEW IF EXISTS public.vw_detalle_conductor;
 create or replace view "public"."vw_detalle_conductor" as  SELECT c.id_conductor,
     COALESCE(c.nombre, 'Sin información'::character varying(100)) AS nombre,
     COALESCE(c.dni, 'Sin información'::character varying(100)) AS dni,
